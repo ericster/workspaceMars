@@ -1,0 +1,26 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+		//ArrayList[] edges = [[0, 1], [1, 2], [2, 3], [3, 4]];
+		//ArrayList[] edges = {[0, 1], [1, 2], [2, 3], [3, 4]};
+		
+		Integer[][] edges = new Integer[][]{{0,1}, {1,2}, {2,3}, {3,4}};  
+		int n = 0;
+		countComponents(n, edges);
+
+	}
+	
+	
+    public static int countComponents(int n, int[][] edges) {
+    	
+    	System.out.println(" row size is " + edges.length); 
+    	System.out.println(" column size is " + edges[1].length); 
+    	return -1;
+        
+    }
+
+}

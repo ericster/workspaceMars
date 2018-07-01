@@ -1,0 +1,55 @@
+
+public class Solution {
+
+	public static void main(String[] args) {
+
+	}
+	
+	
+	/*
+	 * 
+	 	addWord("bad")
+		addWord("dad")
+		addWord("mad")
+		search("pad") -> false
+		search("bad") -> true
+		search(".ad") -> true
+		search("b..") -> true
+
+	 */
+	public static int N = 26;
+
+	class WordDictionary {
+
+	    /** Initialize your data structure here. */
+	    public WordDictionary() {
+	    	Trie top = new Trie();
+	        
+	    }
+	    
+	    /** Adds a word into the data structure. */
+	    public void addWord(String word) {
+	        
+	    }
+	    
+	    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+	    public boolean search(String word) {
+	    	
+	    	return false;
+	    }
+	}
+	
+	class Trie {
+		boolean isAssigned;
+		boolean isWord;
+		Trie[] childen = new Trie[N];
+	}
+
+	/**
+	 * Your WordDictionary object will be instantiated and called as such:
+	 * WordDictionary obj = new WordDictionary();
+	 * obj.addWord(word);
+	 * boolean param_2 = obj.search(word);
+	 */
+
+}

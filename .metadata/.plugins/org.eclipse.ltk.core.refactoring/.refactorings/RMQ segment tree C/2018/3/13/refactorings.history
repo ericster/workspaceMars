@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RMQ segment tree C/rmq.c&apos; to &apos;rmq.cpp&apos;" description="Rename resource &apos;rmq.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="rmq.c" name="rmq.cpp" stamp="1522209717313" updateReferences="true"/>
+</session>

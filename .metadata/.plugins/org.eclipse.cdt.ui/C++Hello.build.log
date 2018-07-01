@@ -1,0 +1,7 @@
+14:49:56 **** Clean-only build of configuration Debug for project C++Hello ****
+make clean 
+rm -rf  ./src/C++Hello.o  ./src/C++Hello.d  C++Hello
+ 
+
+14:49:57 Build Finished (took 308ms)
+

@@ -1,0 +1,105 @@
+import java.util.Arrays;
+import java.util.Stack;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		ListNode head = new ListNode(1);
+		head.next = new ListNode(2);
+		head.next.next = new ListNode(3);
+		head.next.next.next = new ListNode(4);
+		//reverseList(head);
+		//reverseList_traverse(head);
+		reverseList_sol(head);
+
+	}
+	
+    public ListNode reverseList_sol(ListNode head) {
+    ListNode newHead = null;
+    while (head != null) {
+        ListNode next = head.next;
+        head.next = newHead;
+        newHead = head;
+        head = next;
+    }
+    return newHead;
+    }
+    
+    public static ListNode reverseList_traverse(ListNode head) {
+    	//if (head == null) return null;
+    	ListNode newHead = null;
+    	ListNode tmp;
+
+		newHead = new ListNode(head.val);
+    	while (head.next != null){
+			System.out.println("head is : " + head.val);
+			head = head.next;
+			tmp = new ListNode(head.val);
+			tmp.next = newHead;
+			newHead = tmp;
+			System.out.println("newHead is : " + newHead.val);
+    	}
+
+		System.out.println("** newHead is : " + newHead.val);
+    	while (newHead.next != null){
+			System.out.println("newHead is : " + newHead.next.val);
+    		newHead = newHead.next;
+    	}
+    	System.out.println("head is : " + head.val);
+    	System.out.println("head is : " + head.next.val);
+    	System.out.println("head is : " + head.next.next.val);
+    	System.out.println("head is : " + head.next.next.next.val);
+    	
+    	return newHead;
+
+    }
+    public static ListNode reverseList(ListNode head) {
+    	Stack<ListNode> stack = new Stack<ListNode>();
+    	if (head == null) return null;
+    	
+    	stack.push(head);
+    	while (head.next != null){
+			System.out.println("stack pushed is : " + head.next.val);
+    		stack.push(head.next);
+    		head = head.next;
+    	}
+    	
+    	//System.out.println("stack is : " + Arrays.toString(stack.toArray()));
+    	ListNode reverse = stack.pop();
+		System.out.println("stack poped is : " + reverse.val);
+    	ListNode tmp = reverse;
+    	while (!stack.isEmpty()){
+    		tmp.next = stack.pop();
+			System.out.println("stack poped is : " + tmp.next.val);
+    		tmp = tmp.next;
+    	}
+    	tmp.next = null;
+
+    	System.out.println("reverse is : " + reverse.val);
+    	System.out.println("reverse is : " + reverse.next.val);
+    	System.out.println("reverse is : " + reverse.next.next.val);
+    	System.out.println("reverse is : " + reverse.next.next.next.val);
+    	System.out.println("reverse is : " + reverse.next.next.next.next.val);
+    	System.out.println("reverse is : " + reverse.next.next.next.next.next.val);
+    	/*
+    	tmp = reverse;
+    	while (tmp.next != null){
+			System.out.println("reverse is : " + tmp.next.val);
+    		tmp = tmp.next;
+    		
+    	}
+    	 * 
+    	*/
+    	return reverse;
+    }
+    
+    /**
+     * Definition for singly-linked list.
+     */
+      public static class ListNode {
+          int val;
+          ListNode next;
+          ListNode(int x) { val = x; }
+      }
+
+}

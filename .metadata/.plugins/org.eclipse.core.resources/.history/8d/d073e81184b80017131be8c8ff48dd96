@@ -1,0 +1,113 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		WordDictionary wd = new WordDictionary();
+		wd.addWord("");
+		wd.addWord("bad");
+		wd.addWord("dad");
+		wd.addWord("dadd");
+		if (wd.search("dad")){
+			System.out.println("In dictionary");
+		}
+		else {
+			System.out.println("Not in dictionary");
+		}
+				
+
+	}
+	
+	/*
+	 * 
+	 	addWord("bad")
+		addWord("dad")
+		addWord("mad")
+		search("pad") -> false
+		search("bad") -> true
+		search(".ad") -> true
+		search("b..") -> true
+
+	 */
+
+	public static class WordDictionary {
+
+	    /** Initialize your data structure here. */
+		int N = 26;
+		public Trie top;
+	    public WordDictionary() {
+	    	top = new Trie();
+	        
+	    }
+	    
+	    public void printWordDictionary() {
+	    	Queue<Trie> queue = new LinkedList<Trie>();
+	    	StringBuilder sb = new StringBuilder();
+	    	Trie tmp ;
+	    	queue.offer(top);
+	    	tmp = queue.poll();
+	    	while (tmp!=null){
+	    		for(int i=0;i<N;i++){
+	    			if(tmp.childen[i]!=null){
+	    				queue.offer(tmp.childen[i]);
+	    				sb.append((char)(i + 'a'));
+	    			}
+	    			if(tmp.childen[i].isWord){
+	    				System.out.println(sb.toString());
+	    			}
+	    		}
+
+				tmp = queue.poll();
+	    	}
+	    	
+	    }
+	    
+	    /** Adds a word into the data structure. */
+	    public void addWord(String word) {
+	    	Trie tmp = top;
+	    	int n = word.length();
+	    	for (int i=0;i<n;i++){
+	    		int idx = word.charAt(i) - 'a';
+	    		if (tmp.childen[idx] == null){
+	    			tmp.childen[idx] = new Trie();
+	    		}
+	    		tmp = tmp.childen[idx];
+	    	}
+	    	tmp.isWord=true;
+	    }
+	    
+	    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+	    public boolean search(String word) {
+	    	Trie tmp = top;
+	    	int n = word.length();
+	    	for (int i=0;i<n;i++){
+	    		int idx = word.charAt(i) == '.'? 0: word.charAt(i) - 'a';
+	    		if (tmp.childen[idx] != null){
+					tmp = tmp.childen[idx];
+	    		}
+	    		else {
+	    			return false;
+	    		}
+	    	}
+			if (tmp.isWord){
+				return true;
+			}
+	    	return false;
+	    }
+
+		public class Trie {
+			boolean isWord;
+			Trie[] childen = new Trie[N];
+		}
+	}
+	
+
+	/**
+	 * Your WordDictionary object will be instantiated and called as such:
+	 * WordDictionary obj = new WordDictionary();
+	 * obj.addWord(word);
+	 * boolean param_2 = obj.search(word);
+	 */
+
+}

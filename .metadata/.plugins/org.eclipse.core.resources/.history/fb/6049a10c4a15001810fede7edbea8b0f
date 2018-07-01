@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+		int[][] edges = new int[][]{{0,1}, {1,2}, {2,3}, {3,4}};  
+		int n = 5;
+		countComponents(n, edges);
+
+	}
+	
+	
+	
+    public static int countComponents(int n, int[][] edges) {
+    	
+    	System.out.println(" row size is " + edges.length); 
+    	System.out.println(" column size is " + edges[1].length); 
+
+		List<Integer>[] adj = new LinkedList[n];
+		for (int i=0;i<n;i++){
+			adj[i] = new LinkedList();
+		}
+		boolean[] visited = new boolean[n];
+		
+		int k = edges.length;
+		int m = edges[1].length;
+		
+		for (int i=k;i<k;k++){
+			adj[edges[i][1]].add(edges[i][2]);
+		}
+		
+		int cnt = 0;
+		for (int i=0;i<n;i++){
+			dfs(i, adj, visited);
+			cnt++;
+
+		}
+		
+		System.out.println("No of islands is " + cnt);
+    	return -1;
+        
+    }
+    
+    public static void dfs (int v, List<Integer>[] adj, boolean[] visited){
+    	visited[v] = true;
+    	int len = adj[v].size();
+    	for (int i=0;i<len;i++){
+    		if (!visited[adj[v].get(i)]){
+    			dfs(adj[v].get(i), adj, visited);
+    		}
+    		
+    	}
+    	
+    }
+
+}

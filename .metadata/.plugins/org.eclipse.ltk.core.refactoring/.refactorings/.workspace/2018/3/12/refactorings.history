@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;LCA Suffix Array&apos; to &apos;LCS Suffix Array&apos;&#x0A;- Original element: &apos;LCA Suffix Array&apos;&#x0A;- Renamed element: &apos;LCA Suffix Array&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;LCA Suffix Array&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=LCA Suffix Array" name="LCS Suffix Array" references="true" stamp="1521917773312" version="1.0"/>
+</session>

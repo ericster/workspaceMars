@@ -1,0 +1,7 @@
+14:49:56 **** Clean-only build of configuration Debug for project Add Two Fractions ****
+make clean 
+rm -rf  ./src/add_fractions.o  ./src/add_fractions.d  "Add Two Fractions"
+ 
+
+14:49:56 Build Finished (took 263ms)
+

@@ -1,0 +1,54 @@
+package subSequenceTags;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<String> targetList = new ArrayList();
+		List<String> availableTagList = new ArrayList();
+		targetList.add("made");
+		targetList.add("in");
+		targetList.add("Spain");
+		availableTagList.add("made");
+		availableTagList.add("weather");
+		availableTagList.add("forecast");
+		availableTagList.add("says");
+		availableTagList.add("that");
+		availableTagList.add("made");
+		availableTagList.add("rain");
+		availableTagList.add("in");
+		availableTagList.add("spain");
+		availableTagList.add("stays");
+		subSequenceTags(targetList, availableTagList);
+		// [5 8]
+
+	}
+	
+    public static List<Integer> subSequenceTags(List<String> targetList, List<String> availableTagList) {
+	// WRITE YOUR CODE HERE
+    	int startIdx=0;
+    	int endIdx=0;
+    	
+    	int tsize = targetList.size();
+    	int [] idx = new int[tsize];
+    	int asize = availableTagList.size();
+    	
+    	for (int j=0;j<tsize;j++){
+			for (int i=0;i<asize;i++){
+				if (availableTagList.get(i).equalsIgnoreCase(targetList.get(j))){
+					
+				}
+
+    		}
+    		
+    	}
+    	
+    	
+    	return null;
+	}
+
+}

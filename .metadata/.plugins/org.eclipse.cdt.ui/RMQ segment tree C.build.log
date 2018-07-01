@@ -1,0 +1,7 @@
+14:49:57 **** Clean-only build of configuration Debug for project RMQ segment tree C ****
+make clean 
+rm -rf  ./rmq.o  ./rmq.d  "RMQ segment tree C"
+ 
+
+14:49:57 Build Finished (took 267ms)
+

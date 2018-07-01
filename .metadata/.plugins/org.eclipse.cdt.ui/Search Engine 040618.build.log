@@ -1,0 +1,95 @@
+23:03:40 **** Build of configuration Debug for project Search Engine 040618 ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:60:23: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        char temp[4][11] = { 0 };
+                             ^
+                             {}
+../src/main.cpp:149:23: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        char temp[2][11] = { 0 };
+                             ^
+                             {}
+../src/main.cpp:249:12: warning: unused variable 'cpu_time_used' [-Wunused-variable]
+    double cpu_time_used;
+           ^
+3 warnings generated.
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/solution.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/solution.d" -MT"src/solution.o" -o "src/solution.o" "../src/solution.cpp"
+../src/solution.cpp:160:19: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        bool isEndOfWord = false;
+                         ^
+../src/solution.cpp:161:13: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        bool block = false;
+                   ^
+../src/solution.cpp:162:15: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int blockCnt = 0;
+                     ^
+../src/solution.cpp:163:15: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        bool removed = false;
+                     ^
+../src/solution.cpp:164:21: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        linked_list *pages = new linked_list;
+                           ^
+../src/solution.cpp:416:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+                while (c = *str++)
+                       ~~^~~~~~~~
+../src/solution.cpp:416:12: note: place parentheses around the assignment to silence this warning
+                while (c = *str++)
+                         ^
+                       (         )
+../src/solution.cpp:416:12: note: use '==' to turn this assignment into an equality comparison
+                while (c = *str++)
+                         ^
+                         ==
+../src/solution.cpp:428:7: warning: unused variable 'step' [-Wunused-variable]
+                int step = 1;
+                    ^
+../src/solution.cpp:446:7: warning: unused variable 'step' [-Wunused-variable]
+                int step = 1;
+                    ^
+../src/solution.cpp:447:7: warning: unused variable 'i' [-Wunused-variable]
+                int i = 0;
+                    ^
+../src/solution.cpp:477:6: warning: unused variable 'N' [-Wunused-variable]
+        int N = 6000;
+            ^
+../src/solution.cpp:503:9: warning: unused variable 'level' [-Wunused-variable]
+    int level = 0;
+        ^
+../src/solution.cpp:504:10: warning: unused variable 'str' [-Wunused-variable]
+    char str[11];
+         ^
+../src/solution.cpp:608:7: warning: unused variable 'str' [-Wunused-variable]
+        char str[11];
+             ^
+../src/solution.cpp:607:6: warning: unused variable 'level' [-Wunused-variable]
+        int level = 0;
+            ^
+14 warnings generated.
+Finished building: ../src/solution.cpp
+ 
+Building file: ../src/trie.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/trie.d" -MT"src/trie.o" -o "src/trie.o" "../src/trie.cpp"
+../src/trie.cpp:69:35: warning: unused variable 'itr' [-Wunused-variable]
+            vector<int>::iterator itr = trie_tree->occurrences.begin();
+                                  ^
+../src/trie.cpp:213:15: warning: unused variable 'j' [-Wunused-variable]
+    int n, i, j;
+              ^
+2 warnings generated.
+Finished building: ../src/trie.cpp
+ 
+Building target: Search Engine 040618
+Invoking: MacOS X C++ Linker
+g++  -o "Search Engine 040618"  ./src/main.o ./src/solution.o ./src/trie.o   
+Finished building target: Search Engine 040618
+ 
+
+23:03:41 Build Finished (took 1s.774ms)
+

@@ -1,0 +1,16 @@
+
+public class Solution {
+
+	public static void main(String[] args) {
+
+	}
+	
+	
+    public int countComponents(int n, int[][] edges) {
+    	
+    	
+    	return -1;
+        
+    }
+
+}

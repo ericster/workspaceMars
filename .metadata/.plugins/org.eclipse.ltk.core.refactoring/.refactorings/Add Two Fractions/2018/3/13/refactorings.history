@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Add Two Fractions/add_fractions&apos; to &apos;add_fractions.cpp&apos;" description="Rename resource &apos;add_fractions&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="add_fractions" name="add_fractions.cpp" stamp="1522213519680" updateReferences="true"/>
+</session>

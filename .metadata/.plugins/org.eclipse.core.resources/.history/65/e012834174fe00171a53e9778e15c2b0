@@ -1,0 +1,22 @@
+package subSequenceTags;
+
+import java.util.List;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		List<String> targetList = new ArrayList();
+		List<String> availableTagList = new ArrayList();
+		 subSequenceTags(targetList, availableTagList)
+
+	}
+	
+    public static List<Integer> subSequenceTags(List<String> targetList, List<String> availableTagList) {
+	// WRITE YOUR CODE HERE
+    	
+    	return null;
+	}
+
+}

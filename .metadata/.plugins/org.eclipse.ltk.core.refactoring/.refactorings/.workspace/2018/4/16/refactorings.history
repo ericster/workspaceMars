@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;retrieveMostFrequentlyUsedWords&apos; to &apos;retrieveMostFrequentlyUsedWordss&apos;&#x0A;- Original element: &apos;retrieveMostFrequentlyUsedWords&apos;&#x0A;- Renamed element: &apos;retrieveMostFrequentlyUsedWords&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;retrieveMostFrequentlyUsedWords&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=retrieveMostFrequentlyUsedWords" name="retrieveMostFrequentlyUsedWordss" references="true" stamp="1523853938931" version="1.0"/>
+</session>

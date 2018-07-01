@@ -1,0 +1,110 @@
+23:03:36 **** Build of configuration Debug for project Accrate Calculator 0328 ****
+make all 
+Building file: ../src/Solution.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Solution.d" -MT"src/Solution.o" -o "src/Solution.o" "../src/Solution.cpp"
+../src/Solution.cpp:256:14: warning: unused variable 'chn' [-Wunused-variable]
+        char chn = str[i+1];
+             ^
+../src/Solution.cpp:380:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    char* inter = "1";
+                  ^
+../src/Solution.cpp:421:4: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
+                        delete res1, res2, res3, res4;
+                        ^
+                              []
+../src/Solution.cpp:381:15: note: allocated with 'new[]' here
+        char* res1 = new char[500];
+                     ^
+../src/Solution.cpp:421:17: warning: expression result unused [-Wunused-value]
+                        delete res1, res2, res3, res4;
+                                     ^~~~
+../src/Solution.cpp:421:23: warning: expression result unused [-Wunused-value]
+                        delete res1, res2, res3, res4;
+                                           ^~~~
+../src/Solution.cpp:421:29: warning: expression result unused [-Wunused-value]
+                        delete res1, res2, res3, res4;
+                                                 ^~~~
+../src/Solution.cpp:468:5: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
+    delete res5, res6, rem, res8, res9;
+    ^
+          []
+../src/Solution.cpp:385:18: note: allocated with 'new[]' here
+    char* res5 = new char[500];
+                 ^
+../src/Solution.cpp:468:18: warning: expression result unused [-Wunused-value]
+    delete res5, res6, rem, res8, res9;
+                 ^~~~
+../src/Solution.cpp:468:24: warning: expression result unused [-Wunused-value]
+    delete res5, res6, rem, res8, res9;
+                       ^~~
+../src/Solution.cpp:468:29: warning: expression result unused [-Wunused-value]
+    delete res5, res6, rem, res8, res9;
+                            ^~~~
+../src/Solution.cpp:468:35: warning: expression result unused [-Wunused-value]
+    delete res5, res6, rem, res8, res9;
+                                  ^~~~
+../src/Solution.cpp:232:10: warning: unused variable 'denumF' [-Wunused-variable]
+    bool denumF = false;
+         ^
+../src/Solution.cpp:390:11: warning: unused variable 'rem_res' [-Wunused-variable]
+    char* rem_res = new char[500];
+          ^
+../src/Solution.cpp:380:11: warning: unused variable 'inter' [-Wunused-variable]
+    char* inter = "1";
+          ^
+../src/Solution.cpp:243:10: warning: unused variable 'result' [-Wunused-variable]
+    char result[1000];
+         ^
+../src/Solution.cpp:363:9: warning: unused variable 'common_denom' [-Wunused-variable]
+    int common_denom;
+        ^
+../src/Solution.cpp:236:9: warning: unused variable 'opcode' [-Wunused-variable]
+    int opcode=0;
+        ^
+../src/Solution.cpp:235:9: warning: unused variable 'no_cnt' [-Wunused-variable]
+    int no_cnt;
+        ^
+../src/Solution.cpp:377:11: warning: unused variable 'temp_res' [-Wunused-variable]
+    char* temp_res;
+          ^
+../src/Solution.cpp:234:9: warning: unused variable 'l' [-Wunused-variable]
+    int l=0;
+        ^
+../src/Solution.cpp:233:13: warning: unused variable 'm' [-Wunused-variable]
+    int k=0,m=0;
+            ^
+../src/Solution.cpp:233:9: warning: unused variable 'k' [-Wunused-variable]
+    int k=0,m=0;
+        ^
+22 warnings generated.
+Finished building: ../src/Solution.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:53:7: warning: unused variable 'dummy2' [-Wunused-variable]
+                int dummy2[33];
+                    ^
+../src/main.cpp:17:12: warning: unused variable 'dummy0' [-Wunused-variable]
+static int dummy0[11];
+           ^
+../src/main.cpp:19:12: warning: unused variable 'dummy1' [-Wunused-variable]
+static int dummy1[22];
+           ^
+3 warnings generated.
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/shuntingYard.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/shuntingYard.d" -MT"src/shuntingYard.o" -o "src/shuntingYard.o" "../src/shuntingYard.cpp"
+Finished building: ../src/shuntingYard.cpp
+ 
+Building target: Accrate Calculator 0328
+Invoking: MacOS X C++ Linker
+g++  -o "Accrate Calculator 0328"  ./src/Solution.o ./src/main.o ./src/shuntingYard.o   
+Finished building target: Accrate Calculator 0328
+ 
+
+23:03:38 Build Finished (took 2s.530ms)
+
